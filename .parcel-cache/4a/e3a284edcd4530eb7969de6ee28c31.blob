@@ -1,0 +1,17 @@
+var _model = require('./model');
+var _templates = require('./templates');
+require('./styles/main.css');
+const $site = document.querySelector('#site');
+_model.model.forEach(block => {
+  let html = '';
+  if (block.type === 'title') {
+    html = _templates.title(block);
+  } else if (block.type === 'text') {
+    html = _templates.text(block);
+  } else if (block.type === 'colums') {
+    html = _templates.colums(block);
+  } else if (block.type === 'image') {
+    html = _templates.image(block);
+  }
+  $site.insertAdjacentHTML('beforeend', html);
+});

@@ -1,0 +1,14 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "row", function () {
+  return row;
+});
+_parcelHelpers.export(exports, "col", function () {
+  return col;
+});
+function row(content) {
+  return `<div class="row">${content}</div>`;
+}
+function col(content) {
+  return `<div class="col-sm">${content}</div>`;
+}

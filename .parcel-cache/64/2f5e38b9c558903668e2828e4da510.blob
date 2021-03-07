@@ -1,0 +1,47 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "title", function () {
+  return title;
+});
+_parcelHelpers.export(exports, "text", function () {
+  return text;
+});
+_parcelHelpers.export(exports, "colums", function () {
+  return colums;
+});
+_parcelHelpers.export(exports, "image", function () {
+  return image;
+});
+function title(block) {
+  return `
+  <div class="row">
+    <div class="col-sm">
+      <h1>${block.value}</h1>
+    </div>
+  </div>
+`;
+}
+function text(block) {
+  return `
+  <div class="row">
+    <div class="col-sm">
+      <p>${block.value}</p>
+    </div>
+  </div>
+`;
+}
+function colums(block) {
+  const html = block.value.map(item => `<div class="col-sm">${item}</div>`);
+  return `
+    <div class="row">
+      ${html.join('')}
+    </div>
+  `;
+}
+function image(block) {
+  return `
+    <div class="row">
+      <img src=${block.value} />
+    </div>
+  `;
+}

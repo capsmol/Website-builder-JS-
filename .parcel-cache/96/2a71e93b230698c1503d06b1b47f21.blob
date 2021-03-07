@@ -1,0 +1,18 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "model", function () {
+  return model;
+});
+const model = [{
+  type: 'title',
+  value: 'Hello world from JS!'
+}, {
+  type: 'text',
+  value: 'here we go with some text'
+}, {
+  type: 'colums',
+  value: ['1111111111', '2222222222', '3333333333']
+}, {
+  type: 'image',
+  value: './assets/IMG_1160.JPG'
+}];

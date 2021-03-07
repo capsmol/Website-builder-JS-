@@ -1,0 +1,8 @@
+var _model = require('./model');
+var _templates = require('./templates');
+require('./styles/main.css');
+const $site = document.querySelector('#site');
+_model.model.forEach(block => {
+  const toHTML = _templates.templates[block.type];
+  $site.insertAdjacentHTML('beforeend', toHTML(block));
+});

@@ -106,3 +106,6 @@ dist
 #parcel
 .parcel-cache/
 parcel-bundle-reports/
+
+#macOS
+.DS_Store
